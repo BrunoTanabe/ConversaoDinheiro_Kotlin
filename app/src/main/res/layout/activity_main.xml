@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="400dp"
+        android:text="Conversor de Dinheiro"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitulo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Digite o valor (em real) que deseja converter:"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_txt" />
+
+    <EditText
+        android:id="@+id/valor_nbr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="R$ 00,00"
+        android:hyphenationFrequency="normal"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitulo_txt" />
+
+    <RadioGroup
+        android:id="@+id/selecao_gprd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:checkedButton="@id/dolar_rd"
+        app:layout_constraintBottom_toTopOf="@+id/conversor_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor_nbr">
+
+        <RadioButton
+            android:id="@+id/dolar_rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dólar (USD$)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/euro_rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Euro (EUR€)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/libra_rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Libra (GBP£)"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/iene_rd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iene (JPY¥)"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/conversor_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="Converter"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultado_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conversor_bt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
